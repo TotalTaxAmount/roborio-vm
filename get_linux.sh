@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
 #
 # Downloads a stock kernel from Xilinx's wiki. It's not perfect, but it gets the
 # job done.

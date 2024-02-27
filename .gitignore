@@ -1,5 +1,7 @@
 *.img
 linux
 
+FRC_*.zip
+
 mnt
 unpacked
