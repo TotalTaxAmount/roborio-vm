@@ -100,6 +100,7 @@ python _modify_ini.py ${STARTUP_INI_FILE} systemsettings ConsoleOut.enabled True
 # Fix lots of erros!!
 echo "Fixing erros..."
 # Erros to fix:
+# TODO: Fix hwclock (mabye DTB or)
 ### Error: "serial#" not defined
 ## Error: "serial#" not defined
 # grep: /boot/.safe/bootimage.ini: No such file or directory
@@ -133,5 +134,5 @@ rm_mount
 # qemu-img snapshot -c initial "$IMG_FILE"
 
 echo "Successfully created $IMG_FILE!"
-echo "Changing permissions, $IM_FILE owned by $USER"
+echo "Changing permissions, $IMG_FILE owned by $USER"
 chown "$USER" "$IMG_FILE"
