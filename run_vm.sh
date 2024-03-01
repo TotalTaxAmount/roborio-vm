@@ -8,7 +8,12 @@ if [ ! -f linux/uImage ]; then
   exit 1
 fi
 
-qemu-system-arm \
+if [ ! -f ../qemu/build/qemu-system-arm ]; then
+    echo "No qemu-system-arm has been build, read the README"
+    exit 1
+fi
+
+../qemu/build/qemu-system-arm \
   -machine xilinx-zynq-a9 -cpu cortex-a9 -m $RAM_SIZE \
   -kernel linux/uImage -dtb linux/devicetree.dtb \
   -display none -serial null -serial mon:stdio \
