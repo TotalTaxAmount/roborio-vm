@@ -3,17 +3,23 @@
 cd `dirname $0`
 source params
 
+QEMU="../qemu/build/qemu-system-arm"
 if [ ! -f linux/uImage ]; then
   echo "Cannot find kernel, run ./get_linux.sh first!"
   exit 1
 fi
 
-if [ ! -f ../qemu/build/qemu-system-arm ]; then
+if [ "$1" == "not_build" ]; then
+    QEMU="qemu-system-arm"
+fi
+
+if [ ! -f ../qemu/build/qemu-system-arm ] && [ $QEMU == "../qemu/build/qemu-system-arm" ]; then
     echo "No qemu-system-arm has been built, read the README"
     exit 1
 fi
 
-../qemu/build/qemu-system-arm \
+
+$QEMU \
   -machine xilinx-zynq-a9 -cpu cortex-a9 -m $RAM_SIZE \
   -kernel linux/uImage -dtb linux/devicetree.dtb \
   -display none -serial null -serial mon:stdio \
