@@ -9,7 +9,7 @@ if [ ! -f linux/uImage ]; then
 fi
 
 if [ ! -f ../qemu/build/qemu-system-arm ]; then
-    echo "No qemu-system-arm has been build, read the README"
+    echo "No qemu-system-arm has been built, read the README"
     exit 1
 fi
 
