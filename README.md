@@ -12,11 +12,9 @@ NI hardware.. this might be for you.
 
 Tested with:
 
-* Fedora 22/24, OSX (run only)
-* QEMU 2.5.0, 2.6.1
-* FRC images: 2017v8 and 2016v18
-  * I tried 2015v23, but there's an error starting the NI configuration daemon
-    and so ssh refuses to start.
+* Nix OS, Arch with a 6.7.5 kernel (run only)
+* QEMU 2.5.0, 2.6.1, 2.8.0
+* FRC images: 2024v2
 
 It probably works on other Linux distributions, and may even work with OSX if
 you adjust the scripts to work there.
@@ -41,7 +39,7 @@ Creating the Virtual Machine root filesystem
 --------------------------------------------
 
 First, you need the image zipfile that is distributed with the FRC Update Suite.
-On a machine with the RoboRIO imaging program installed, you can find it at:
+On a windows machine with the RoboRIO imaging program installed, you can find it at:
 
     C:\Program Files (x86)\National Instruments\LabVIEW 2015\project\roboRIO Tool\FRC Images
 
@@ -96,6 +94,8 @@ Known issues
 * Probably should use a different filesystem for the image
 * Lots of error messages on bootup, would be nice if we could use the actual
   kernel used on the RoboRIO (this seems like it should be possible)
+* No FPGA support (yet)
+* a lot of real mounts on the roboRio don't exist in the vm yet
   
 Building QEMU from source
 =========================
@@ -127,7 +127,7 @@ This is intended to be a project that all members of the FIRST community can
 quickly and easily contribute to. If you find a bug, or have an idea that you
 think others can use:
 
-1. [Fork this git repository](https://github.com/robotpy/roborio-vm/fork) to your github account
+1. [Fork this git repository](https://github.com/totaltaxamount/roborio-vm/fork) to your github account
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push -u origin my-new-feature`)
