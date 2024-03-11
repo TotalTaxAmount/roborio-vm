@@ -1,0 +1,55 @@
+NI Linux Real-Time (run mode)
+
+Log in with your NI-Auth credentials.
+
+X11 forwarding request failed on channel 0
+Last login: Tue Aug 25 04:54:26 2020 from 10.0.2.2
+admin@roboRIO-SimVM:~# mount
+/dev/mmcblk0 on / type ext3 (rw,relatime,data=ordered)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=117848k,nr_inodes=29462,mode=755)
+sysfs on /sys type sysfs (rw,relatime)
+proc on /proc type proc (rw,relatime)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,mode=755)
+tmpfs on /var/volatile type tmpfs (rw,relatime,size=65608k)
+devpts on /dev/pts type devpts (rw,relatime,gid=5,mode=620)
+admin@roboRIO-SimVM:~# lsblk
+NAME      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+mtdblock0  31:0    0    1M  0 disk 
+mtdblock1  31:1    0    5M  0 disk 
+mtdblock2  31:2    0  128K  0 disk 
+mtdblock3  31:3    0  5.9M  0 disk 
+mtdblock4  31:4    0    4M  0 disk 
+mmcblk0   179:0    0   16G  0 disk /
+admin@roboRIO-SimVM:~# ls /dev
+[1;34mblock[0m/              [1;35mmtd2[0m                [1;35mram5[0m                [1;35mtty24[0m               [1;35mtty50[0m
+[1;34mcgroup[0m/             [1;35mmtd2ro[0m              [1;35mram6[0m                [1;35mtty25[0m               [1;35mtty51[0m
+[1;34mchar[0m/               [1;35mmtd3[0m                [1;35mram7[0m                [1;35mtty26[0m               [1;35mtty52[0m
+[1;35mconsole[0m             [1;35mmtd3ro[0m              [1;35mram8[0m                [1;35mtty27[0m               [1;35mtty53[0m
+[1;35mcpu_dma_latency[0m     [1;35mmtd4[0m                [1;35mram9[0m                [1;35mtty28[0m               [1;35mtty54[0m
+[1;34mdisk[0m/               [1;35mmtd4ro[0m              [1;35mrandom[0m              [1;35mtty29[0m               [1;35mtty55[0m
+[1;36mfd[0m@                 [1;35mmtdblock0[0m           [1;34mshm[0m/                [1;35mtty3[0m                [1;35mtty56[0m
+[1;35mfull[0m                [1;35mmtdblock1[0m           [1;34msnd[0m/                [1;35mtty30[0m               [1;35mtty57[0m
+[1;35miio:device0[0m         [1;35mmtdblock2[0m           [1;36mstderr[0m@             [1;35mtty31[0m               [1;35mtty58[0m
+[0;35minitctl[0m|            [1;35mmtdblock3[0m           [1;36mstdin[0m@              [1;35mtty32[0m               [1;35mtty59[0m
+[1;34minput[0m/              [1;35mmtdblock4[0m           [1;36mstdout[0m@             [1;35mtty33[0m               [1;35mtty6[0m
+[1;35mkmsg[0m                [1;35mnetwork_latency[0m     [1;35mtty[0m                 [1;35mtty34[0m               [1;35mtty60[0m
+[1;35mlog[0m=                [1;35mnetwork_throughput[0m  [1;35mtty0[0m                [1;35mtty35[0m               [1;35mtty61[0m
+[1;35mloop-control[0m        [1;35mnull[0m                [1;35mtty1[0m                [1;35mtty36[0m               [1;35mtty62[0m
+[1;35mloop0[0m               [1;35mport[0m                [1;35mtty10[0m               [1;35mtty37[0m               [1;35mtty63[0m
+[1;35mloop1[0m               [1;35mpsaux[0m               [1;35mtty11[0m               [1;35mtty38[0m               [1;35mtty7[0m
+[1;35mloop2[0m               [1;35mptmx[0m                [1;35mtty12[0m               [1;35mtty39[0m               [1;35mtty8[0m
+[1;35mloop3[0m               [1;34mpts[0m/                [1;35mtty13[0m               [1;35mtty4[0m                [1;35mtty9[0m
+[1;35mloop4[0m               [1;35mram0[0m                [1;35mtty14[0m               [1;35mtty40[0m               [1;35mttyPS0[0m
+[1;35mloop5[0m               [1;35mram1[0m                [1;35mtty15[0m               [1;35mtty41[0m               [1;35murandom[0m
+[1;35mloop6[0m               [1;35mram10[0m               [1;35mtty16[0m               [1;35mtty42[0m               [1;35mvcs[0m
+[1;35mloop7[0m               [1;35mram11[0m               [1;35mtty17[0m               [1;35mtty43[0m               [1;35mvcs1[0m
+[1;35mmem[0m                 [1;35mram12[0m               [1;35mtty18[0m               [1;35mtty44[0m               [1;35mvcsa[0m
+[1;35mmemory_bandwidth[0m    [1;35mram13[0m               [1;35mtty19[0m               [1;35mtty45[0m               [1;35mvcsa1[0m
+[1;35mmmcblk0[0m             [1;35mram14[0m               [1;35mtty2[0m                [1;35mtty46[0m               [1;35mvga_arbiter[0m
+[1;35mmtd0[0m                [1;35mram15[0m               [1;35mtty20[0m               [1;35mtty47[0m               [1;35mwatchdog[0m
+[1;35mmtd0ro[0m              [1;35mram2[0m                [1;35mtty21[0m               [1;35mtty48[0m               [1;35mwatchdog0[0m
+[1;35mmtd1[0m                [1;35mram3[0m                [1;35mtty22[0m               [1;35mtty49[0m               [1;35mxdevcfg[0m
+[1;35mmtd1ro[0m              [1;35mram4[0m                [1;35mtty23[0m               [1;35mtty5[0m                [1;35mzero[0m
+admin@roboRIO-SimVM:~# exit
+logout
+Connection to localhost closed.
