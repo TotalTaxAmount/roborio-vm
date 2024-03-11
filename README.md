@@ -45,7 +45,7 @@ On a windows machine with the RoboRIO imaging program installed, you can find it
 
 Copy the zipfile to your Linux host, and run the following:
 
-    ./create_rootfs.sh /path/to/FRC_roboRIO_*.zip
+    sudo ./create_rootfs.sh /path/to/FRC_roboRIO_*.zip
   
 Give it a few minutes, enter in your password when prompted, and at the end you 
 should end up with an image file and a kernel file. This only needs to be done
@@ -54,9 +54,9 @@ once.
 Running the Virtual Machine
 ---------------------------
 
-Simple command:
+Simple command (remove not_build if you are using a custom version of qemu):
 
-    ./run_vm.sh
+    ./run_vm.sh not_build
 
 At the moment there are a lot of error messages, but eventually it will finish
 starting and you can login via the console or via SSH.
