@@ -12,7 +12,7 @@ NI hardware.. this might be for you.
 
 Tested with:
 
-* Nix OS, Arch with a 6.7.5 kernel (run only)
+* Nix OS 24.05, Arch with a 6.7.5 kernel (run only)
 * QEMU 2.5.0, 2.6.1, 2.8.0
 * FRC images: 2024v2
 
